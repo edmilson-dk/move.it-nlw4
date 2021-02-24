@@ -50,7 +50,7 @@ body {
 }
 
 body, input, textarea, button {
-  font: 400 16px "Inter";
+  font: 400 1rem "Inter";
 }
 
 button {
