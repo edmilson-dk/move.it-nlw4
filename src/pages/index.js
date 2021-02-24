@@ -6,6 +6,11 @@ function Home() {
   return (
     <div className="container">
       <ExperienceBar />
+
+      <section>
+        <article></article>
+        <article></article>
+      </section>
     </div>
   )
 }
