@@ -1,8 +1,12 @@
 import Head from 'next/head';
 
+import ExperienceBar from '../components/ExperienceBar';
+
 function Home() {
   return (
-    <h1>Ola nextjs</h1>
+    <div>
+      <ExperienceBar />
+    </div>
   )
 }
 
