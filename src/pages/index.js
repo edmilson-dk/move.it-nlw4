@@ -1,10 +1,10 @@
 import Head from 'next/head';
 
-import ExperienceBar from '../components/ExperienceBar';
+import { ExperienceBar } from '../components/ExperienceBar';
 
 function Home() {
   return (
-    <div>
+    <div className="container">
       <ExperienceBar />
     </div>
   )
