@@ -1,0 +1,21 @@
+[
+  {
+    "type": "body",
+    "description": "Caminhe 100 metros, e repita está caminhada de 100 metros, 3 vezes.",
+    "amount": "300"
+  },
+  {
+    "type": "body",
+    "description": "Faça 5 series de flexões, e em cada serie, faça 10 flexões.",
+    "amount": "400"
+  },
+  {
+    "type": "body",
+    "description": "Faça 5 series de abdominais, e em cada serie faça 5 abdominais",
+    "amount": "200"
+  },
+  {
+    "type": "eye",
+    "description": "Descanse seus olhos, olhando para o horizonte, ou algo bem longe de você."
+  }
+]
