@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: local("./fonts/inter-variable.ttf");
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  src: local("./fonts/Rajdhani-SemiBold.ttf");
+}
