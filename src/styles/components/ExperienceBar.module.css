@@ -22,7 +22,7 @@
   background-color: var(--green);
 }
 
-span..currentExperience {
+span.currentExperience {
   position: relative;
   top: 12px;
   transform: translate(50%);
