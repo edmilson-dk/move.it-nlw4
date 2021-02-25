@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react';
 
 import challenges from '../../challenges.json';
 
@@ -34,11 +34,34 @@ export function ChallengesContextProvider({children}: ChallengesContextProviderP
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
+  useEffect(() => {
+     if("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js").then(
+          function (registration) {
+            Notification.requestPermission();
+          }
+        );
+      });
+    }
+  }, []);
+
   function startNewChallenge() {
     const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
     const challenge = challenges[randomChallengeIndex];
 
     setActiveChallenge(challenge);
+
+    new Audio('/notification.mp3').play();
+
+    if (Notification.permission === 'granted') {
+      navigator.serviceWorker.ready
+        .then(registration => {
+          registration.showNotification('Novo desafio!', {
+            body: `Valendo ${challenge.amount}xp`,
+          });
+        });  
+    }
   }
 
   function levelUp() {
